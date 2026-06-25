@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legacy Install & Assembly LLC</title>
+  <meta name="description" content="Veteran owned family operated assembly and light install service in Mingo Junction, Ohio and surrounding areas." />
+
+  <style>
+    :root {
+      --green: #5d7f36;
+      --dark-green: #10220f;
+      --blue: #0b2b4a;
+      --light-blue: #3d82c6;
+      --gold: #d8c85d;
+      --white: #f4f4f4;
+      --black: #070707;
+      --gray: #d2d2d2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(61,130,198,0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(93,127,54,0.20), transparent 35%),
+        #070707;
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page { width: 100%; overflow: hidden; }
+
+    .top-banner {
+      background: linear-gradient(180deg, #010101, #081006 60%, #050505);
+      padding: 14px 12px 10px;
+      text-align: center;
+      border-bottom: 2px solid rgba(93,127,54,0.75);
+      box-shadow: 0 6px 22px rgba(0,0,0,0.65);
+    }
+
+    .top-banner img {
+      width: min(100%, 1320px);
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    section {
+      position: relative;
+      padding: 64px 20px;
+      overflow: hidden;
+    }
+
+    .section-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      opacity: 0.55;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .section-shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.94), rgba(0,0,0,0.64), rgba(0,0,0,0.94)),
+        radial-gradient(circle at center, rgba(11,43,74,0.28), transparent 55%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: 590px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 3px solid var(--green);
+    }
+
+    .hero-card,
+    .about-box,
+    .contact-card {
+      max-width: 980px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 38px 28px;
+      text-align: center;
+      background: rgba(5, 8, 10, 0.82);
+      border: 2px solid rgba(93,127,54,0.95);
+      box-shadow: 0 0 30px rgba(0,0,0,0.85);
+      border-radius: 16px;
+      backdrop-filter: blur(2px);
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2.2rem, 6vw, 5rem);
+      line-height: 1;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 0 #000;
+    }
+
+    .tagline {
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--green);
+      margin-bottom: 20px;
+    }
+
+    .hero p,
+    .about-box p,
+    .contact-card p,
+    .section-title p {
+      color: var(--gray);
+      font-size: 1.12rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 2px solid var(--green);
+      box-shadow: 0 0 18px rgba(0,0,0,0.45);
+    }
+
+    .btn-primary { background: var(--green); color: #fff; }
+    .btn-secondary { background: rgba(11,43,74,0.88); color: #fff; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .section-title h2,
+    .about-box h2,
+    .contact-card h2 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4rem);
+      text-transform: uppercase;
+      color: var(--white);
+      text-shadow: 3px 3px 0 #000;
+      line-height: 1.05;
+    }
+
+    .section-title p {
+      max-width: 760px;
+      margin: 12px auto 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card,
+    .step {
+      background: linear-gradient(145deg, rgba(11,43,74,0.84), rgba(16,34,15,0.82));
+      border: 1px solid rgba(93,127,54,0.9);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 0 22px rgba(0,0,0,0.6);
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      color: var(--gold);
+      font-size: 1.4rem;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .card li {
+      margin-bottom: 9px;
+      color: var(--white);
+    }
+
+    .about {
+      border-top: 2px solid rgba(93,127,54,0.6);
+      border-bottom: 2px solid rgba(93,127,54,0.6);
+    }
+
+    .about-box h2 { color: var(--green); }
+
+    .location-line {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      border: 1px solid var(--green);
+      border-radius: 999px;
+      color: var(--gold);
+      background: rgba(0,0,0,0.45);
+      font-weight: 900;
+    }
+
+    .notice {
+      margin-top: 22px;
+      padding: 18px;
+      border: 1px solid var(--gold);
+      background: rgba(216,200,93,0.08);
+      color: var(--white);
+      border-radius: 10px;
+      font-weight: 800;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .step { text-align: center; }
+
+    .step-number {
+      width: 44px;
+      height: 44px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.3rem;
+    }
+
+    .phone {
+      font-size: clamp(2rem, 7vw, 4rem);
+      font-weight: 900;
+      color: var(--green);
+      margin: 18px 0;
+      text-shadow: 3px 3px 0 #000;
+    }
+
+    .hours {
+      font-size: 1.35rem;
+      color: var(--gold) !important;
+      font-weight: 900;
+      margin-top: 22px;
+    }
+
+    footer {
+      padding: 26px 20px;
+      text-align: center;
+      background: #050505;
+      border-top: 1px solid var(--green);
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .cards,
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .section-bg { object-fit: cover; opacity: 0.40; }
+    }
+
+    @media (max-width: 620px) {
+      .cards,
+      .process-grid { grid-template-columns: 1fr; }
+      section { padding: 46px 14px; }
+      .hero-card,
+      .about-box,
+      .contact-card { padding: 26px 18px; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="top-banner">
+      <img src="header-banner.png" alt="Legacy Install & Assembly LLC logo">
+    </header>
+
+    <main>
+      <section class="hero">
+        <img class="section-bg" src="bg-services.png" alt="">
+        <div class="section-shade"></div>
+        <div class="content hero-card">
+          <h1>Assembly & Setup Help Done Right</h1>
+          <div class="tagline">Professional. Reliable. Upfront Pricing.</div>
+          <p>
+            Veteran owned and family operated help for homes, garages, and small businesses.
+            Send a photo, product link, or short description and we’ll let you know if it fits our service.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="sms:17403815623">Text for a Quote</a>
+            <a class="btn btn-secondary" href="tel:17403815623">Call (740) 381-5623</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <img class="section-bg" src="bg-work.png" alt="">
+        <div class="section-shade"></div>
+        <div class="content container">
+          <div class="section-title">
+            <h2>Services</h2>
+            <p>
+              Clear, simple assembly and setup work. No guessing, no hidden fees, and no surprise upcharges.
+            </p>
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <h3>Home Assembly</h3>
+              <ul>
+                <li>Furniture assembly</li>
+                <li>TV stands and entertainment centers</li>
+                <li>Desks, dressers, tables, chairs, and bed frames</li>
+                <li>Patio and outdoor furniture assembly</li>
+                <li>Workout equipment assembly</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Storage & Organization</h3>
+              <ul>
+                <li>Shelving and bookcase assembly</li>
+                <li>Garage and basement storage setup</li>
+                <li>Small storage racks and cabinets</li>
+                <li>Room setup and item rearranging</li>
+                <li>General home organization help</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Small Business Setup</h3>
+              <ul>
+                <li>Office desks and chairs</li>
+                <li>Waiting room furniture</li>
+                <li>Retail shelving assembly</li>
+                <li>Small display fixture setup</li>
+                <li>Back-room storage assembly</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <img class="section-bg" src="bg-about.png" alt="">
+        <div class="section-shade"></div>
+        <div class="content about-box">
+          <h2>Who We Are</h2>
+          <p>
+            Legacy Install & Assembly LLC is a local, veteran owned, family operated business
+            focused on dependable assembly, setup, and light install help.
+          </p>
+          <p>
+            We keep things simple: clear communication, upfront pricing, respectful service,
+            and clean work before we leave.
+          </p>
+          <div class="location-line">Mingo Junction and surrounding Ohio areas</div>
+          <div class="notice">
+            No hidden fees. No surprise upcharges. Pricing is discussed before the job starts.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content container">
+          <div class="section-title">
+            <h2>How It Works</h2>
+            <p>Texting first is best because photos and item links help us give a faster, more accurate quote.</p>
+          </div>
+
+          <div class="process-grid">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h3>Text Us</h3>
+              <p>Send the job details, location, and photos or links if you have them.</p>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <h3>Get Pricing</h3>
+              <p>We review the job and give you upfront pricing before work begins.</p>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <h3>Schedule</h3>
+              <p>We find a time that works and confirm the details before arrival.</p>
+            </div>
+
+            <div class="step">
+              <div class="step-number">4</div>
+              <h3>Done Right</h3>
+              <p>We complete the work carefully and clean up the work area when finished.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content container">
+          <div class="section-title">
+            <h2>What We Do Not Do</h2>
+            <p>This keeps the service clear, safe, and within the work we are set up to provide.</p>
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <h3>No Licensed Trade Work</h3>
+              <ul>
+                <li>No electrical work</li>
+                <li>No plumbing work</li>
+                <li>No HVAC work</li>
+                <li>No gas line work</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>No Major Construction</h3>
+              <ul>
+                <li>No roofing</li>
+                <li>No structural framing</li>
+                <li>No concrete work</li>
+                <li>No large remodeling jobs</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>No Moving Company Services</h3>
+              <ul>
+                <li>No full house moves</li>
+                <li>No large appliance moving</li>
+                <li>No box truck moving service</li>
+                <li>No hazardous material hauling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <img class="section-bg" src="bg-contact.png" alt="">
+        <div class="section-shade"></div>
+        <div class="content contact-card">
+          <h2>Ready To Get Started?</h2>
+          <p>
+            Text today with your project details, photos, or product links.
+            We’ll let you know if it fits our service and provide clear pricing before work begins.
+          </p>
+
+          <div class="phone">(740) 381-5623</div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="sms:17403815623">Text Now</a>
+            <a class="btn btn-secondary" href="tel:17403815623">Call Now</a>
+          </div>
+
+          <p class="hours">Hours: Monday - Saturday | 8 AM - 7 PM</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Legacy Install & Assembly LLC | Mingo Junction, Ohio and surrounding areas</p>
+      <p>Veteran Owned | Family Operated | Professional. Reliable. Done Right.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
