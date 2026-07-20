@@ -1,563 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Furniture Assembly in Mingo Junction, OH | Legacy Install & Assembly</title>
-  <meta name="description" content="Veteran-owned furniture assembly, storage setup, and light installation help for homes and small businesses in Mingo Junction and surrounding Ohio communities." />
-
+  <meta name="description" content="Veteran-owned furniture assembly, storage setup, and light installation help in Mingo Junction, Steubenville, Wintersville, Brilliant, Toronto, and nearby Ohio communities.">
+  <link rel="canonical" href="https://www.legacyinstallassembly.com/">
+  <link rel="icon" href="header-banner.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Legacy Install & Assembly | Furniture Assembly Done Right">
+  <meta property="og:description" content="Local, veteran-owned furniture assembly and setup with clear quotes before work begins.">
+  <meta property="og:url" content="https://www.legacyinstallassembly.com/">
+  <meta property="og:image" content="https://www.legacyinstallassembly.com/preview-social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HomeAndConstructionBusiness",
+    "name":"Legacy Install & Assembly LLC",
+    "url":"https://www.legacyinstallassembly.com/",
+    "telephone":"+1-740-381-5623",
+    "description":"Veteran-owned furniture assembly, storage setup, organization, and light installation help.",
+    "areaServed":["Mingo Junction, Ohio","Steubenville, Ohio","Wintersville, Ohio","Brilliant, Ohio","Toronto, Ohio"],
+    "openingHours":"Mo-Sa 08:00-19:00"
+  }
+  </script>
   <style>
-    :root {
-      --green: #5d7f36;
-      --dark-green: #10220f;
-      --blue: #0b2b4a;
-      --light-blue: #3d82c6;
-      --gold: #d8c85d;
-      --white: #f4f4f4;
-      --black: #070707;
-      --gray: #d2d2d2;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(61,130,198,0.18), transparent 35%),
-        radial-gradient(circle at bottom right, rgba(93,127,54,0.20), transparent 35%),
-        #070707;
-      color: var(--white);
-      line-height: 1.6;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .page { width: 100%; overflow: hidden; }
-
-    .top-banner {
-      background: linear-gradient(180deg, #010101, #081006 60%, #050505);
-      padding: 14px 12px 10px;
-      text-align: center;
-      border-bottom: 2px solid rgba(93,127,54,0.75);
-      box-shadow: 0 6px 22px rgba(0,0,0,0.65);
-    }
-
-    .top-banner img {
-      width: min(100%, 1320px);
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    section {
-      position: relative;
-      padding: 64px 20px;
-      overflow: hidden;
-    }
-
-    .section-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center;
-      opacity: 0.55;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .section-shade {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(90deg, rgba(0,0,0,0.94), rgba(0,0,0,0.64), rgba(0,0,0,0.94)),
-        radial-gradient(circle at center, rgba(11,43,74,0.28), transparent 55%);
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .container {
-      max-width: 1150px;
-      margin: 0 auto;
-    }
-
-    .hero {
-      min-height: 590px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 3px solid var(--green);
-    }
-
-    .hero-card,
-    .about-box,
-    .contact-card {
-      max-width: 980px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 38px 28px;
-      text-align: center;
-      background: rgba(5, 8, 10, 0.82);
-      border: 2px solid rgba(93,127,54,0.95);
-      box-shadow: 0 0 30px rgba(0,0,0,0.85);
-      border-radius: 16px;
-      backdrop-filter: blur(2px);
-    }
-
-    .hero h1 {
-      margin: 0 0 14px;
-      font-size: clamp(2.2rem, 6vw, 5rem);
-      line-height: 1;
-      color: var(--white);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-shadow: 3px 3px 0 #000;
-    }
-
-    .tagline {
-      font-size: clamp(1.2rem, 3vw, 2rem);
-      font-weight: 800;
-      color: var(--green);
-      margin-bottom: 20px;
-    }
-
-    .hero p,
-    .about-box p,
-    .contact-card p,
-    .section-title p {
-      color: var(--gray);
-      font-size: 1.12rem;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 24px;
-      border-radius: 8px;
-      font-size: 1.05rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      border: 2px solid var(--green);
-      box-shadow: 0 0 18px rgba(0,0,0,0.45);
-    }
-
-    .btn-primary { background: var(--green); color: #fff; }
-    .btn-secondary { background: rgba(11,43,74,0.88); color: #fff; }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 34px;
-    }
-
-    .section-title h2,
-    .about-box h2,
-    .contact-card h2 {
-      margin: 0;
-      font-size: clamp(2rem, 5vw, 4rem);
-      text-transform: uppercase;
-      color: var(--white);
-      text-shadow: 3px 3px 0 #000;
-      line-height: 1.05;
-    }
-
-    .section-title p {
-      max-width: 760px;
-      margin: 12px auto 0;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card,
-    .step {
-      background: linear-gradient(145deg, rgba(11,43,74,0.84), rgba(16,34,15,0.82));
-      border: 1px solid rgba(93,127,54,0.9);
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: 0 0 22px rgba(0,0,0,0.6);
-    }
-
-    .card h3 {
-      margin: 0 0 12px;
-      color: var(--gold);
-      font-size: 1.4rem;
-    }
-
-    .card ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .card li {
-      margin-bottom: 9px;
-      color: var(--white);
-    }
-
-    .about {
-      border-top: 2px solid rgba(93,127,54,0.6);
-      border-bottom: 2px solid rgba(93,127,54,0.6);
-    }
-
-    .about-box h2 { color: var(--green); }
-
-    .location-line {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 18px;
-      border: 1px solid var(--green);
-      border-radius: 999px;
-      color: var(--gold);
-      background: rgba(0,0,0,0.45);
-      font-weight: 900;
-    }
-
-    .notice {
-      margin-top: 22px;
-      padding: 18px;
-      border: 1px solid var(--gold);
-      background: rgba(216,200,93,0.08);
-      color: var(--white);
-      border-radius: 10px;
-      font-weight: 800;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .step { text-align: center; }
-
-    .step-number {
-      width: 44px;
-      height: 44px;
-      margin: 0 auto 12px;
-      border-radius: 50%;
-      background: var(--green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 1.3rem;
-    }
-
-    .phone {
-      font-size: clamp(2rem, 7vw, 4rem);
-      font-weight: 900;
-      color: var(--green);
-      margin: 18px 0;
-      text-shadow: 3px 3px 0 #000;
-    }
-
-    .hours {
-      font-size: 1.35rem;
-      color: var(--gold) !important;
-      font-weight: 900;
-      margin-top: 22px;
-    }
-
-    .review-promo {
-      max-width: 760px;
-      margin: 30px auto 0;
-      text-align: center;
-    }
-
-    .review-promo img {
-      width: 100%;
-      border: 2px solid rgba(93,127,54,0.95);
-      border-radius: 14px;
-      box-shadow: 0 0 24px rgba(0,0,0,0.75);
-    }
-
-    .review-promo img.review-qr {
-      width: min(260px, 100%);
-      display: block;
-      margin: 0 auto;
-      background: #fff;
-    }
-
-    .review-promo .btn {
-      margin-top: 16px;
-      background: var(--gold);
-      color: #070707;
-      border-color: var(--gold);
-    }
-
-    footer {
-      padding: 26px 20px;
-      text-align: center;
-      background: #050505;
-      border-top: 1px solid var(--green);
-      color: var(--gray);
-      font-size: 0.95rem;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 20px;
-      max-width: 1000px;
-      margin: 0 auto 20px;
-    }
-
-    .footer-links a {
-      color: var(--white);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    @media (max-width: 900px) {
-      .cards,
-      .process-grid { grid-template-columns: 1fr 1fr; }
-      .section-bg { object-fit: cover; opacity: 0.40; }
-    }
-
-    @media (max-width: 620px) {
-      .cards,
-      .process-grid { grid-template-columns: 1fr; }
-      section { padding: 46px 14px; }
-      .hero-card,
-      .about-box,
-      .contact-card { padding: 26px 18px; }
-      .btn { width: 100%; }
-    }
+    :root{--ink:#050807;--panel:#0b1210;--panel2:#0b1d2e;--green:#789c43;--green2:#a4c767;--blue:#173f67;--gold:#e2cf62;--white:#f7f7f2;--muted:#c5cbc6;--line:rgba(164,199,103,.25);--max:1180px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--white);font:16px/1.6 Arial,Helvetica,sans-serif}a{color:inherit}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:#fff;color:#000;padding:10px;z-index:20}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(5,8,7,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.navin{min-height:98px;display:flex;align-items:center;gap:24px}.brand{display:flex;align-items:center;flex:1 1 390px;min-width:0;margin-right:auto;text-decoration:none}.brand img{width:410px;max-width:100%;height:auto;display:block}.links{display:flex;gap:20px;align-items:center;flex:0 0 auto}.links a{text-decoration:none;color:var(--muted);font-weight:800}.links a:hover,.links a:focus{color:var(--white)}
+    .button{display:inline-flex;justify-content:center;align-items:center;min-height:50px;padding:12px 22px;border:1px solid var(--green);border-radius:8px;text-decoration:none;text-transform:uppercase;font-weight:900;letter-spacing:.04em}.primary{background:var(--green);color:#071005}.secondary{background:var(--panel2);color:#fff}.small{min-height:43px;padding:8px 17px}
+    .hero{position:relative;overflow:hidden;padding:96px 0 86px;border-bottom:1px solid var(--line);background:radial-gradient(circle at 75% 30%,rgba(23,63,103,.45),transparent 33%),radial-gradient(circle at 15% 80%,rgba(120,156,67,.22),transparent 35%)}.hero:after{content:"";position:absolute;right:-7%;top:10%;width:44%;aspect-ratio:1;border:1px solid var(--line);transform:rotate(12deg);border-radius:42px}.hero-copy{position:relative;z-index:1;max-width:850px}.eyebrow{color:var(--green2);text-transform:uppercase;letter-spacing:.15em;font-weight:900}.hero h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.93;letter-spacing:-.04em;text-transform:uppercase;margin:13px 0 24px}.hero p{max-width:760px;color:var(--muted);font-size:1.18rem}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}.proof{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:58px;background:rgba(11,18,16,.75)}.proof div{padding:18px;text-align:center;font-weight:900;border-right:1px solid var(--line)}.proof div:last-child{border:0}.proof span{display:block;color:var(--green2);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+    section{padding:82px 0}.section-head{max-width:760px;margin-bottom:38px}.section-head h2{font-size:clamp(2.2rem,5vw,4.2rem);line-height:1;text-transform:uppercase;margin:0 0 15px}.section-head p{color:var(--muted);font-size:1.08rem}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:28px}.card h3{color:var(--gold);font-size:1.35rem;margin:0 0 12px}.card ul{padding-left:20px;margin:0}.card li{margin:8px 0}.pricing{margin-top:22px;padding:22px;border-left:4px solid var(--gold);background:rgba(226,207,98,.07)}
+    .why{background:#07100b;border-block:1px solid var(--line)}.why-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;align-items:center}.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px}.check{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:10px}.check strong{display:block;color:var(--green2)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:12px}.num{display:grid;place-items:center;width:40px;height:40px;background:var(--green);color:#071005;border-radius:50%;font-weight:900}.step h3{margin:14px 0 6px}.step p{color:var(--muted);margin:0}
+    .areas{background:linear-gradient(110deg,var(--panel2),#0a150d)}.area-list{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.area-list span{padding:10px 16px;border:1px solid var(--green);border-radius:999px;font-weight:800}.scope{margin-top:30px;color:var(--muted);font-size:.95rem}.scope strong{color:var(--white)}
+    .faq{max-width:880px}.faq details{border-bottom:1px solid var(--line);padding:18px 0}.faq summary{cursor:pointer;font-weight:900;font-size:1.08rem;color:var(--white)}.faq details p{color:var(--muted);margin:10px 0 0}.contact{padding-bottom:70px}.contact-box{background:linear-gradient(135deg,#102a43,#10220f);border:1px solid var(--green);border-radius:18px;padding:48px;text-align:center}.contact-box h2{font-size:clamp(2.25rem,5vw,4rem);line-height:1;margin:0 0 16px;text-transform:uppercase}.phone{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:var(--green2)}.review-box{display:grid;grid-template-columns:220px 1fr;gap:34px;align-items:center;max-width:820px;margin:28px auto 0;padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:16px;text-align:left}.review-box img{display:block;width:220px;max-width:100%;background:#fff;border:8px solid #fff;border-radius:10px}.review-box h3{font-size:1.65rem;margin:0 0 8px}.review-box p{color:var(--muted);margin:0 0 18px}
+    footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--muted)}.footerin{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footerlinks{display:flex;gap:15px;flex-wrap:wrap}.footerlinks a{color:var(--muted)}.mobilebar{display:none}
+    @media(max-width:1050px){.brand{flex-basis:320px}.brand img{width:340px}.links{gap:14px}.links a{font-size:.92rem}}
+    @media(max-width:900px){.links{display:none}.navin{min-height:88px}.brand img{width:410px;max-width:72vw}.proof,.steps{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}.hero{padding-top:70px}}
+    @media(max-width:620px){.wrap{width:min(calc(100% - 28px),var(--max))}.navin{min-height:78px}.brand img{width:100%;max-width:78vw}.nav .button{display:none}.hero{padding:55px 0 65px}.hero h1{font-size:3rem}.proof{grid-template-columns:1fr 1fr;margin-top:40px}.proof div:nth-child(2){border-right:0}.proof div{border-bottom:1px solid var(--line)}.proof div:nth-child(3),.proof div:nth-child(4){border-bottom:0}.actions .button{width:100%}section{padding:62px 0}.steps,.checks{grid-template-columns:1fr}.contact-box{padding:34px 20px}.review-box{grid-template-columns:1fr;text-align:center;padding:24px 18px}.review-box img{margin:auto;width:200px}.mobilebar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;z-index:15;left:0;right:0;bottom:0;background:#050807;padding:9px 12px;border-top:1px solid var(--line)}footer{padding-bottom:105px}}
   </style>
 </head>
-
 <body>
-  <div class="page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#top" aria-label="Legacy Install and Assembly home"><img src="header-banner.png" alt="Legacy Install & Assembly LLC"></a>
+      <nav class="links" aria-label="Main navigation"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#areas">Service Area</a><a href="#faq">FAQ</a></nav>
+      <a class="button primary small" href="sms:17403815623">Text for Quote</a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top"><div class="wrap hero-copy">
+      <div class="eyebrow">Local • Veteran-Owned • Family-Operated</div>
+      <h1>Furniture Assembly & Setup Done Right</h1>
+      <p>Dependable assembly, storage setup, organization, and light installation help for homes, garages, and small businesses. Send a photo or product link for a clear quote before work begins.</p>
+      <div class="actions"><a class="button primary" href="sms:17403815623">Text for a Quote</a><a class="button secondary" href="tel:17403815623">Call (740) 381-5623</a></div>
+      <div class="proof"><div><span>Veteran-Owned</span>Local service</div><div><span>Family-Operated</span>Respectful care</div><div><span>Upfront Quotes</span>No surprises</div><div><span>30-Day</span>Workmanship warranty</div></div>
+    </div></section>
 
-    <header class="top-banner">
-      <img src="header-banner.png" alt="Legacy Install & Assembly LLC logo">
-    </header>
+    <section id="services"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">What we do</div><h2>Assembly and setup without the hassle</h2><p>Focused local help for the projects that take time, tools, and careful attention.</p></div>
+      <div class="grid3">
+        <article class="card"><h3>Home Assembly</h3><ul><li>Furniture and bed frames</li><li>TV stands and entertainment centers</li><li>Desks, dressers, tables, and chairs</li><li>Patio and outdoor furniture</li><li>Workout equipment</li></ul></article>
+        <article class="card"><h3>Storage & Organization</h3><ul><li>Shelving and bookcases</li><li>Garage and basement storage</li><li>Small racks and cabinets</li><li>Room setup and rearranging</li><li>General organization help</li></ul></article>
+        <article class="card"><h3>Small Business Setup</h3><ul><li>Office desks and chairs</li><li>Waiting-room furniture</li><li>Retail shelving</li><li>Small display fixtures</li><li>Back-room storage</li></ul></article>
+      </div>
+      <div class="pricing"><strong>Simple, project-specific pricing.</strong> Send your location, photos, or a product link. We’ll review the details and provide a clear quote before scheduling—no hidden fees or surprise upcharges.</div>
+    </div></section>
 
-    <main>
-      <section class="hero">
-        <img class="section-bg" src="bg-services.png" alt="">
-        <div class="section-shade"></div>
-        <div class="content hero-card">
-          <h1>Furniture Assembly & Setup Done Right</h1>
-          <div class="tagline">Local Service. Careful Work. Upfront Pricing.</div>
-          <p>
-            Veteran-owned and family-operated assembly and setup help for homes, garages, and small businesses
-            in Mingo Junction and surrounding Ohio communities. Text a photo, product link, or short description
-            for a clear quote before work begins.
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="sms:17403815623">Text for a Quote</a>
-            <a class="btn btn-secondary" href="tel:17403815623">Call (740) 381-5623</a>
-          </div>
-        </div>
-      </section>
+    <section class="why" id="why"><div class="wrap why-grid">
+      <div class="section-head"><div class="eyebrow">Why Legacy</div><h2>Local help you can count on</h2><p>Straightforward communication, careful work, and respect for your home or business from the first message through cleanup.</p></div>
+      <div class="checks"><div class="check"><strong>Upfront communication</strong>Project details and pricing are discussed before work begins.</div><div class="check"><strong>Careful workmanship</strong>Projects are assembled, checked, and finished with attention to detail.</div><div class="check"><strong>Respectful service</strong>Your space is treated carefully and the work area is cleaned.</div><div class="check"><strong>Workmanship warranty</strong>Installation errors caused by our workmanship are covered for 30 days.</div></div>
+    </div></section>
 
-      <section id="services">
-        <img class="section-bg" src="bg-work.png" alt="">
-        <div class="section-shade"></div>
-        <div class="content container">
-          <div class="section-title">
-            <h2>Services</h2>
-            <p>
-              Dependable assembly and setup help with clear communication, careful workmanship, and pricing discussed before the job begins.
-            </p>
-          </div>
+    <section><div class="wrap"><div class="section-head"><div class="eyebrow">How it works</div><h2>From a text to done right</h2></div><div class="steps"><article class="step"><div class="num">1</div><h3>Send Details</h3><p>Text your location, photos, project description, or product link.</p></article><article class="step"><div class="num">2</div><h3>Get a Quote</h3><p>We confirm the scope and give you clear project-specific pricing.</p></article><article class="step"><div class="num">3</div><h3>Schedule</h3><p>Choose an available time and receive confirmation before arrival.</p></article><article class="step"><div class="num">4</div><h3>Done Right</h3><p>We complete and check the work, then clean the work area.</p></article></div></div></section>
 
-          <div class="cards">
-            <div class="card">
-              <h3>Home Assembly</h3>
-              <ul>
-                <li>Furniture assembly</li>
-                <li>TV stands and entertainment centers</li>
-                <li>Desks, dressers, tables, chairs, and bed frames</li>
-                <li>Patio and outdoor furniture assembly</li>
-                <li>Workout equipment assembly</li>
-              </ul>
-            </div>
+    <section class="areas" id="areas"><div class="wrap"><div class="section-head"><div class="eyebrow">Service area</div><h2>Serving Mingo Junction and nearby Ohio communities</h2><p>Availability depends on the project and travel distance. Include your location when requesting a quote so we can confirm service.</p></div><div class="area-list"><span>Mingo Junction</span><span>Steubenville</span><span>Wintersville</span><span>Brilliant</span><span>Toronto</span><span>Nearby Ohio communities</span></div><p class="scope"><strong>Our specialty:</strong> assembly, setup, organization, and light installation. We do not provide licensed electrical, plumbing, HVAC, gas-line or structural construction work, full moving-company services, or hazardous-material hauling.</p></div></section>
 
-            <div class="card">
-              <h3>Storage & Organization</h3>
-              <ul>
-                <li>Shelving and bookcase assembly</li>
-                <li>Garage and basement storage setup</li>
-                <li>Small storage racks and cabinets</li>
-                <li>Room setup and item rearranging</li>
-                <li>General home organization help</li>
-              </ul>
-            </div>
+    <section id="faq"><div class="wrap faq"><div class="section-head"><div class="eyebrow">Frequently asked questions</div><h2>Before you schedule</h2></div>
+      <details><summary>What should I send for a quote?</summary><p>Your location, a short project description, and any useful photos or product links. More detail helps us provide more accurate pricing.</p></details>
+      <details><summary>How is pricing determined?</summary><p>Each project is reviewed individually based on the item, complexity, location, and information provided. You receive the price before work begins.</p></details>
+      <details><summary>What if parts or instructions are missing?</summary><p>Please have the product, hardware, and instructions available. A return visit caused by missing parts or an incorrect product may involve an additional trip charge.</p></details>
+      <details><summary>Do you perform electrical, plumbing, or major construction work?</summary><p>No. We focus on assembly, setup, organization, and light installation—not licensed trades or structural construction.</p></details>
+      <details><summary>Is the work covered by a warranty?</summary><p>Yes. Workmanship errors caused by our installation are covered for 30 days, subject to the full workmanship warranty.</p></details>
+      <details><summary>Do you travel outside Mingo Junction?</summary><p>Yes, depending on the project and distance. Text your location and project details so availability can be confirmed.</p></details>
+    </div></section>
 
-            <div class="card">
-              <h3>Small Business Setup</h3>
-              <ul>
-                <li>Office desks and chairs</li>
-                <li>Waiting room furniture</li>
-                <li>Retail shelving assembly</li>
-                <li>Small display fixture setup</li>
-                <li>Back-room storage assembly</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="about" id="service-area">
-        <img class="section-bg" src="bg-about.png" alt="">
-        <div class="section-shade"></div>
-        <div class="content about-box">
-          <h2>Local Help You Can Count On</h2>
-          <p>
-            Legacy Install & Assembly LLC is a local, veteran-owned and family-operated business
-            providing dependable assembly, setup, and light installation help.
-          </p>
-          <p>
-            You can expect straightforward communication, respectful service, careful work,
-            and a clean work area when the job is finished.
-          </p>
-          <div class="location-line">Mingo Junction and surrounding Ohio areas</div>
-          <div class="notice">
-            Know the price before the work begins—no hidden fees or surprise upcharges.
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="content container">
-          <div class="section-title">
-            <h2>How It Works</h2>
-            <p>Texting is the fastest way to get started. Photos and product links help us provide a more accurate quote.</p>
-          </div>
-
-          <div class="process-grid">
-            <div class="step">
-              <div class="step-number">1</div>
-              <h3>Text Us</h3>
-              <p>Send your location, project details, and any helpful photos or product links.</p>
-            </div>
-
-            <div class="step">
-              <div class="step-number">2</div>
-              <h3>Get Pricing</h3>
-              <p>We review the project and provide clear pricing before any work begins.</p>
-            </div>
-
-            <div class="step">
-              <div class="step-number">3</div>
-              <h3>Schedule</h3>
-              <p>Choose an available time, and we’ll confirm the project details before arrival.</p>
-            </div>
-
-            <div class="step">
-              <div class="step-number">4</div>
-              <h3>Done Right</h3>
-              <p>Your project is completed carefully, checked, and the work area is cleaned before we leave.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="content container">
-          <div class="section-title">
-            <h2>Services Outside Our Scope</h2>
-            <p>For safety and clarity, we do not provide the following licensed trades or major construction services.</p>
-          </div>
-
-          <div class="cards">
-            <div class="card">
-              <h3>No Licensed Trade Work</h3>
-              <ul>
-                <li>No electrical work</li>
-                <li>No plumbing work</li>
-                <li>No HVAC work</li>
-                <li>No gas line work</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h3>No Major Construction</h3>
-              <ul>
-                <li>No roofing</li>
-                <li>No structural framing</li>
-                <li>No concrete work</li>
-                <li>No large remodeling jobs</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h3>No Moving Company Services</h3>
-              <ul>
-                <li>No full house moves</li>
-                <li>No large appliance moving</li>
-                <li>No box truck moving service</li>
-                <li>No hazardous material hauling</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact" id="contact">
-        <img class="section-bg" src="bg-contact.png" alt="">
-        <div class="section-shade"></div>
-        <div class="content contact-card">
-          <h2>Ready for a Clear, Upfront Quote?</h2>
-          <p>
-            Text your project details, location, photos, or product links today.
-            We’ll confirm whether the project fits our services and provide clear pricing before work begins.
-          </p>
-
-          <div class="phone">(740) 381-5623</div>
-
-          <div class="cta-row">
-            <a class="btn btn-primary" href="sms:17403815623">Text Now</a>
-            <a class="btn btn-secondary" href="tel:17403815623">Call Now</a>
-          </div>
-
-          <div class="review-promo">
-            <h3>Enjoyed Your Service?</h3>
-            <p>Scan the code or use the button below to leave us a Google review.</p>
-            <img class="review-qr" src="google-review-qr.png" alt="QR code to leave Legacy Install and Assembly a Google review" loading="lazy">
-            <a class="btn" href="https://g.page/r/CethiajBDSNJEAI/review" target="_blank" rel="noopener">Tap Here To Leave A Google Review</a>
-          </div>
-
-          <p class="hours">Hours: Monday - Saturday | 8 AM - 7 PM</p>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="index.html">Home</a>
-        <a href="index.html#services">Services</a>
-        <a href="index.html#service-area">Service Area</a>
-        <a href="index.html#contact">Contact</a>
-        <a href="policies/index.html#terms">Terms of Service</a>
-        <a href="policies/index.html#privacy">Privacy Policy</a>
-        <a href="policies/index.html#cancellation">Cancellation & Refund Policy</a>
-        <a href="policies/index.html#warranty">Workmanship Warranty</a>
-      </nav>
-      <p>Legacy Install & Assembly LLC | Mingo Junction, Ohio and surrounding areas</p>
-      <p>Veteran-Owned | Family-Operated | Local Service. Careful Work. Done Right.</p>
-    </footer>
-
-  </div>
+    <section class="contact" id="contact"><div class="wrap contact-box"><div class="eyebrow">Ready to get started?</div><h2>Send your project for a clear quote</h2><p>Text your location, photos, description, or product link. We’ll confirm whether the project fits our services before scheduling.</p><div class="phone">(740) 381-5623</div><div class="actions" style="justify-content:center"><a class="button primary" href="sms:17403815623">Text Now</a><a class="button secondary" href="tel:17403815623">Call Now</a></div><p><strong>Monday–Saturday • 8 AM–7 PM</strong></p></div>
+      <div class="review-box"><img src="google-review-qr.png" alt="QR code to leave Legacy Install and Assembly a Google review"><div><div class="eyebrow">Already worked with us?</div><h3>Share your experience on Google</h3><p>Scan the QR code with your phone or use the button below. Your feedback helps local customers feel confident choosing Legacy Install & Assembly.</p><a class="button primary small" href="https://g.page/r/CethiajBDSNJEAI/review" target="_blank" rel="noopener">Leave a Google Review</a></div></div>
+    </section>
+  </main>
+  <footer><div class="wrap footerin"><div>Legacy Install & Assembly LLC<br>Veteran-Owned • Family-Operated</div><nav class="footerlinks" aria-label="Policy navigation"><a href="policies/index.html#terms">Terms</a><a href="policies/index.html#privacy">Privacy</a><a href="policies/index.html#cancellation">Cancellation & Refunds</a><a href="policies/index.html#warranty">Warranty</a><a href="https://g.page/r/CethiajBDSNJEAI/review" target="_blank" rel="noopener">Leave a Google Review</a></nav></div></footer>
+  <div class="mobilebar"><a class="button primary small" href="sms:17403815623">Text Quote</a><a class="button secondary small" href="tel:17403815623">Call</a></div>
 </body>
 </html>
